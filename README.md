@@ -29,8 +29,8 @@ Screen_Library_Compressor/
 ```
 
 > [!NOTE]
-> Secrets (if any) will be in the [/.env](/.env) file and the rest of config settings will be in [config/config.json](config/config.json)
-> The [db/create_db.py](db/create_db.py) script is for creating the DB if not exists, or drop and create as a nuke and pave
+> Secrets (if any) will be in the [/.env](/.env) file and the rest of config settings will be in [config/config.json](config/config.json) </br>
+> The [db/create_db.py](db/create_db.py) script is for creating the DB if not exists, or drop and create as a nuke and pave </br>
 
 ---
 ## Notes

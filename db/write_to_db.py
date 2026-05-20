@@ -20,8 +20,8 @@ def insert_file_list(rows):
     for row in rows:
         try:
             c.execute("""
-                INSERT INTO file_list (file_path, codec, bitrate, file_size, film_length, film_type)
-                VALUES (:file_path, :codec, :bitrate, :file_size, :film_length, :film_type)
+                INSERT INTO file_list (file_name, file_path, codec, bitrate, file_size, film_length, film_type)
+                VALUES (:file_name, :file_path, :codec, :bitrate, :file_size, :film_length, :film_type)
             """, row)
             inserted += 1
         except sqlite3.IntegrityError:

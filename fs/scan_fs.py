@@ -92,7 +92,8 @@ def scan(mode):
             file_size = f"{fsize_bytes / 1_000_000:.0f}Mb"
 
             results.append({
-                "file_path":   fpath,
+                "file_name":   fname,
+                "file_path":   root,
                 "codec":       codec,
                 "bitrate":     bitrate,
                 "file_size":   file_size,

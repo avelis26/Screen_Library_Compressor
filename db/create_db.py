@@ -23,7 +23,8 @@ def create_db():
     c.execute("""
         CREATE TABLE IF NOT EXISTS file_list (
             id          INTEGER PRIMARY KEY AUTOINCREMENT,
-            file_path   TEXT NOT NULL UNIQUE,
+            file_name   TEXT NOT NULL UNIQUE,
+            file_path   TEXT NOT NULL,
             codec       TEXT NOT NULL,
             bitrate     TEXT NOT NULL,
             file_size   TEXT NOT NULL,

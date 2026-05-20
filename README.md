@@ -2,6 +2,7 @@
 Automation Tool To Apply A Quality Standard To Your Movie / TV Shows Library
 
 ## File Tree
+
 Screen_Library_Compressor/
 ├─ config/
 │  ├─ config.json

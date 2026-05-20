@@ -11,7 +11,7 @@ Screen_Library_Compressor/
 │  ├─ config.json
 ├─ db/
 │  ├─ create_db.py
-│  ├─ Write_to_db.py
+│  ├─ write_to_db.py
 │  ├─ read_from_db.py
 │  ├─ slc.db
 ├─ fs/
@@ -30,7 +30,7 @@ Screen_Library_Compressor/
 
 > [!NOTE]
 > The [db/create_db.py](db/create_db.py) script is for creating the DB if not exists, or drop and create as a nuke and pave </br>
-> The [db/Write_to_db.py](db/Write_to_db.py) script will contain functions for writing status changes or file lists to the SQLite database </br>
+> The [db/write_to_db.py](db/write_to_db.py) script will contain functions for writing status changes or file lists to the SQLite database </br>
 > The [db/read_from_db.py](db/read_from_db.py) script will contain functions for reading records from the SQLite database </br>
 > The [db/slc.db](db/slc.db) will contain the SQLite database but in PROD will exist in `~/.local/share/Screen_Library_Compressor` </br>
 > The [fs/scan_fs.py](fs/scan_fs.py) script will contain functions for scanning the file system per the library base path defined in [config/config.json](config/config.json) </br>

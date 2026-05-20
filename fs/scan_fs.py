@@ -14,7 +14,7 @@ def probe_file(path):
     cmd = [
         "ffprobe", "-v", "error",
         "-select_streams", "v:0",
-        "-show_entries", "stream=codec_name,bit_rate,duration",
+        "-show_entries", "stream=codec_name,bit_rate,duration,width,height",
         "-of", "json",
         path
     ]
@@ -27,6 +27,8 @@ def probe_file(path):
 
         s = streams[0]
         codec = s.get("codec_name")
+        width = s.get("width")
+        height = s.get("height")
 
         # bit_rate may be missing at stream level; fall back to format level
         bitrate = s.get("bit_rate")
@@ -50,7 +52,7 @@ def probe_file(path):
         bitrate_mbps = f"{int(bitrate) / 1_000_000:.1f}"
         duration_mins = f"{float(duration) / 60:.1f}"
 
-        return codec, bitrate_mbps, duration_mins
+        return codec, bitrate_mbps, duration_mins, width, height
 
     except (subprocess.TimeoutExpired, json.JSONDecodeError, Exception):
         return None
@@ -88,7 +90,7 @@ def scan(mode):
             if probe is None:
                 continue
 
-            codec, bitrate, film_length = probe
+            codec, bitrate, film_length, width, height = probe
             file_size = f"{fsize_bytes / 1_000_000:.0f}"
 
             results.append({
@@ -98,7 +100,9 @@ def scan(mode):
                 "bitrate_Mbps":     bitrate,
                 "file_size_Mb":     file_size,
                 "film_length_m":    film_length,
-                "film_type":        mode
+                "film_type":        mode,
+                "width":            width,
+                "height":           height
             })
 
     return results

@@ -30,6 +30,9 @@ def create_db():
             file_size_Mb    INTEGER NOT NULL,
             film_length_m   REAL NOT NULL,
             film_type       TEXT NOT NULL,
+            width           INTEGER NOT NULL,
+            height          INTEGER NOT NULL,
+            ratio           REAL GENERATED ALWAYS AS (ROUND(bitrate_Mbps / film_length_m, 3)) STORED,
             created_at      TEXT DEFAULT (datetime('now'))
         )
     """)

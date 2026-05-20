@@ -1,8 +1,11 @@
 # Screen_Library_Compressor
-Automation Tool To Apply A Quality Standard To Your Movie / TV Shows Library
 
+>Automation Tool To Apply A Quality Standard To Your Movie / TV Shows Library
+
+---
 ## File Tree
 
+```
 Screen_Library_Compressor/
 ├─ config/
 │  ├─ config.json
@@ -22,7 +25,10 @@ Screen_Library_Compressor/
 ├─ main.py
 ├─ .gitignore
 ├─ README.md
+```
+---
 
+## Notes
 
 > [!NOTE]
 > Useful information that users should know, even when skimming content.

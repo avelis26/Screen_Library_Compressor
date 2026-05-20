@@ -36,7 +36,7 @@ Screen_Library_Compressor/
 > Scheduling will handled by cron and [util/schedule.cron](util/schedule.cron) will contain command to create or edit the cron job </br>
 > The [log/create_log.py](log/create_log.py) script will contain functions for creating the log file if not exists, nothing if exists </br>
 > The [log/write_log.py](log/write_log.py) script will contain functions for writing to the log file (as defined in [config/config.json](config/config.json)) in a structured format </br>
-> The [/main.py](/main.py) script will contain functions for  </br>
+> The [/main.py](/main.py) script will logic conrtol and will call all the other scripts </br>
 
 > [!CAUTION]
 > Secrets (if any) will be in the [/.env](/.env) file and the rest of config settings will be in [config/config.json](config/config.json) </br>
@@ -60,13 +60,13 @@ Screen_Library_Compressor/
 > Advises about risks or negative outcomes of certain actions.
 
 ---
-## 0. Dev Set Up
+## Dependacies
 ```fish
 sudo pacman -S python-dotenv
-/.env # file for secrets
-TMDB_API_KEY=00000000
-SQLITE_DB=~/path/to/database.db
 ```
+> [!TIP]
+> Your package manager may vary.
+
 ```python
 import os
 import sqlite3
@@ -75,4 +75,12 @@ from dotenv import load_dotenv
 load_dotenv()
 DB_PATH = os.path.expanduser(os.getenv("SQLITE_DB"))
 ```
+> [!NOTE]
+> Example /.env content:
+> TMDB_API_KEY=00000000
+> SQLITE_DB=~/path/to/database.db
+
+> [!CAUTION]
+> Make sure the /.env file is in the .gitignore to avoid leaking secrets!
+
 ---

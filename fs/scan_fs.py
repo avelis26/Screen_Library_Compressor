@@ -97,6 +97,7 @@ def scan(mode):
                 "bitrate":     bitrate,
                 "file_size":   file_size,
                 "film_length": film_length,
+                "film_type":   mode
             })
 
     return results

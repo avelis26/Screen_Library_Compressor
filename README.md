@@ -25,7 +25,6 @@ Screen_Library_Compressor/
 ├─ main.py
 ├─ .gitignore
 ├─ README.md
-├─ .env
 ```
 
 > [!NOTE]
@@ -39,32 +38,5 @@ Screen_Library_Compressor/
 > The [log/create_log.py](log/create_log.py) script will contain functions for creating the log file if not exists, nothing if exists </br>
 > The [log/write_log.py](log/write_log.py) script will contain functions for writing to the log file (as defined in [config/config.json](config/config.json)) in a structured format </br>
 > The [/main.py](/main.py) script will logic conrtol and will call all the other scripts </br>
-
-> [!CAUTION]
-> Secrets (if any) will be in the [/.env](/.env) file and the rest of config settings will be in [config/config.json](config/config.json) </br>
-
----
-## Dependacies
-```fish
-sudo pacman -S python-dotenv
-```
-> [!TIP]
-> Your package manager may vary.
-
-```python
-import os
-import sqlite3
-from dotenv import load_dotenv
-
-load_dotenv()
-DB_PATH = os.path.expanduser(os.getenv("SQLITE_DB"))
-```
-> [!NOTE]
-> Example /.env content: </br>
-> TMDB_API_KEY=00000000 </br>
-> SQLITE_DB=~/path/to/database.db </br>
-
-> [!CAUTION]
-> Make sure the /.env file is in the .gitignore to avoid leaking secrets!
 
 ---

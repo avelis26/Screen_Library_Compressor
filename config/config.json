@@ -1,6 +1,6 @@
 {
     "db_path": "/home/avelis/source/Screen_Library_Compressor/db/slc.db",
-    "movies_path": "/mnt/data/temp/Movies",
+    "movies_path": "/mnt/data/Media/Movies",
     "shows_path": "/mnt/data/temp/Shows",
     "file_exts": [
         ".mkv",

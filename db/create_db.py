@@ -22,15 +22,15 @@ def create_db():
     # --- EXAMPLE TABLE — edit/replace as needed ---
     c.execute("""
         CREATE TABLE IF NOT EXISTS file_list (
-            id          INTEGER PRIMARY KEY AUTOINCREMENT,
-            file_name   TEXT NOT NULL UNIQUE,
-            file_path   TEXT NOT NULL,
-            codec       TEXT NOT NULL,
-            bitrate     TEXT NOT NULL,
-            file_size   TEXT NOT NULL,
-            film_length TEXT NOT NULL,
-            film_type   TEXT NOT NULL,
-            created_at  TEXT DEFAULT (datetime('now'))
+            id              INTEGER PRIMARY KEY AUTOINCREMENT,
+            file_name       TEXT NOT NULL UNIQUE,
+            file_path       TEXT NOT NULL,
+            codec           TEXT NOT NULL,
+            bitrate_Mbps    REAL NOT NULL,
+            file_size_Mb    INTEGER NOT NULL,
+            film_length_m   REAL NOT NULL,
+            film_type       TEXT NOT NULL,
+            created_at      TEXT DEFAULT (datetime('now'))
         )
     """)
 

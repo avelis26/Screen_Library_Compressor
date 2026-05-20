@@ -47,8 +47,8 @@ def probe_file(path):
         if not codec or not bitrate or not duration:
             return None
 
-        bitrate_mbps = f"{int(bitrate) / 1_000_000:.1f}Mbps"
-        duration_mins = f"{float(duration) / 60:.1f}m"
+        bitrate_mbps = f"{int(bitrate) / 1_000_000:.1f}"
+        duration_mins = f"{float(duration) / 60:.1f}"
 
         return codec, bitrate_mbps, duration_mins
 
@@ -89,16 +89,16 @@ def scan(mode):
                 continue
 
             codec, bitrate, film_length = probe
-            file_size = f"{fsize_bytes / 1_000_000:.0f}Mb"
+            file_size = f"{fsize_bytes / 1_000_000:.0f}"
 
             results.append({
-                "file_name":   fname,
-                "file_path":   root,
-                "codec":       codec,
-                "bitrate":     bitrate,
-                "file_size":   file_size,
-                "film_length": film_length,
-                "film_type":   mode
+                "file_name":        fname,
+                "file_path":        root,
+                "codec":            codec,
+                "bitrate_Mbps":     bitrate,
+                "file_size_Mb":     file_size,
+                "film_length_m":    film_length,
+                "film_type":        mode
             })
 
     return results

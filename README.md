@@ -9,6 +9,7 @@
 Screen_Library_Compressor/
 ├─ config/
 │  ├─ config.json
+│  ├─ config.json
 ├─ db/
 │  ├─ create_db.py
 │  ├─ Write_to_db.py
@@ -26,12 +27,14 @@ Screen_Library_Compressor/
 ├─ .gitignore
 ├─ README.md
 ```
----
-
-## Notes
 
 > [!NOTE]
 > Useful information that users should know, even when skimming content.
+
+---
+## Notes
+
+
 
 > [!TIP]
 > Helpful advice for doing things better or more easily.

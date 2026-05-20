@@ -43,5 +43,5 @@ Screen_Library_Compressor/
 > The [log/slc.log](log/slc.log) will contain the log file but in PROD will exist in `~/.local/share/Screen_Library_Compressor` </br>
 
 > [!TIP]
-> Scheduling will handled by cron and [util/schedule.cron](util/schedule.cron) will contain command to create or edit the cron job </br>
+> Scheduling will handled by cron and [util/schedule.cron](util/schedule.cron) will contain an example command to create or edit the cron job </br>
 ---

@@ -1,3 +1,14 @@
 {
-  "db_path": "/home/avelis/source/Screen_Library_Compressor/db/slc.db"
-}   
+    "db_path": "/home/avelis/source/Screen_Library_Compressor/db/slc.db",
+    "movies_path": "/mnt/data/temp/Movies",
+    "shows_path": "/mnt/data/temp/Shows",
+    "file_exts": [
+        ".mkv",
+        ".mov",
+        ".mp4",
+        ".webm",
+        ".avi",
+        ".mpg"
+    ],
+    "min_file_size": 33792000
+}

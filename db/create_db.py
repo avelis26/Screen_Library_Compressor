@@ -21,12 +21,13 @@ def create_db():
 
     # --- EXAMPLE TABLE — edit/replace as needed ---
     c.execute("""
-        CREATE TABLE IF NOT EXISTS example_table (
+        CREATE TABLE IF NOT EXISTS file_list (
             id          INTEGER PRIMARY KEY AUTOINCREMENT,
-            text_col    TEXT NOT NULL,
-            int_col     INTEGER,
-            real_col    REAL,
-            bool_col    INTEGER DEFAULT 0,       -- SQLite has no BOOL; use 0/1
+            file_path   TEXT NOT NULL,
+            codec       TEXT NOT NULL,
+            bitrate     TEXT NOT NULL,
+            file_size   TEXT NOT NULL,
+            film_length TEXT NOT NULL,
             created_at  TEXT DEFAULT (datetime('now'))
         )
     """)

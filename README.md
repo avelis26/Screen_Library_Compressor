@@ -63,16 +63,16 @@ Screen_Library_Compressor/
 ## 0. Dev Set Up
 ```fish
 sudo pacman -S python-dotenv
-```
 /.env # file for secrets
 TMDB_API_KEY=00000000
 SQLITE_DB=~/path/to/database.db
-
+```
+```python
 import os
 import sqlite3
 from dotenv import load_dotenv
 
 load_dotenv()
 DB_PATH = os.path.expanduser(os.getenv("SQLITE_DB"))
-
+```
 ---

@@ -26,10 +26,11 @@ Screen_Library_Compressor/
 ├─ main.py
 ├─ .gitignore
 ├─ README.md
+├─ .env
 ```
 
 > [!NOTE]
-> Useful information that users should know, even when skimming content.
+> Secrets (if any) will be in the /.env file and the rest of config settings will be in [config/config.json](config/config.json)
 
 ---
 ## Notes
@@ -47,3 +48,22 @@ Screen_Library_Compressor/
 
 > [!CAUTION]
 > Advises about risks or negative outcomes of certain actions.
+
+
+
+## 0. Dev Set Up
+```fish
+sudo pacman -S python-dotenv python-requests
+sudo pacman -S python-pyqt6
+```
+
+/.env # file for secrets
+TMDB_API_KEY=ae5ec04cf1d3e2aaf73bf57df908bad3
+SQLITE_DB=~/.local/share/reellibman/reellibman.db
+
+import os
+import sqlite3
+from dotenv import load_dotenv
+
+load_dotenv()
+DB_PATH = os.path.expanduser(os.getenv("SQLITE_DB"))

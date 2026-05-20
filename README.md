@@ -76,9 +76,9 @@ load_dotenv()
 DB_PATH = os.path.expanduser(os.getenv("SQLITE_DB"))
 ```
 > [!NOTE]
-> Example /.env content:
-> TMDB_API_KEY=00000000
-> SQLITE_DB=~/path/to/database.db
+> Example /.env content: </br>
+> TMDB_API_KEY=00000000 </br>
+> SQLITE_DB=~/path/to/database.db </br>
 
 > [!CAUTION]
 > Make sure the /.env file is in the .gitignore to avoid leaking secrets!
